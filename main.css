@@ -2,7 +2,6 @@
     font-size: 20px;
     color:aliceblue;
 }
-/* Galaxy nền chính */
 body{
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body{
     position: relative;
 }
 
-/* Hạt sáng */
 .particle{
     position: absolute;
     width: 4px;
@@ -24,7 +22,6 @@ body{
     opacity: 0.8;
 }
 
-/* Nhiều hạt */
 .particle:nth-child(1){ top: 10%; left: 20%; animation-duration: 6s; }
 .particle:nth-child(2){ top: 30%; left: 70%; animation-duration: 9s; }
 .particle:nth-child(3){ top: 60%; left: 40%; animation-duration: 7s; }
@@ -33,7 +30,6 @@ body{
 .particle:nth-child(6){ top: 20%; left: 55%; animation-duration: 11s; }
 .particle:nth-child(7){ top: 75%; left: 65%; animation-duration: 6s; }
 
-/* Chuyển động */
 @keyframes float{
     0%{
         transform: translateY(0) scale(1);
@@ -57,7 +53,6 @@ body{
     position: relative;
 }
 
-/* Chấm li ti */
 body::before{
     content: "";
     position: absolute;
@@ -76,7 +71,6 @@ body::before{
     opacity: 0.8;
 }
 
-/* Hiệu ứng di chuyển */
 @keyframes moveDots{
     0%{
         transform: translate(0,0);
