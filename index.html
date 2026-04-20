@@ -1,57 +1,51 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>RADA360</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="main.css">
-    </head>
 
-    <body>
-       <canvas id="myCanvas" width="500" height="300"></canvas>
+<head>
+    <title>RADA360</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+</head>
 
-<script>
-let canvas = document.getElementById("myCanvas");
-let ctx = canvas.getContext("2d");
+<body>
+    <h1 class="brim">Công Ty Cổ Phần Công Nghệ Rada360</h1>
+    <h3 class="uti">Đây là trang tra cứu thông tin doanh nghiệp, tra cứu công ty và tra cứu mã số thuế doanh nghiệp cho
+        Công Ty Cổ Phần Công Nghệ Rada360 tại Hồ Chí Minh. Bạn có thể dùng Smart Vision để xem nhanh hồ sơ, ngành nghề
+        và các doanh nghiệp liên quan trong cùng khu vực.</h3>
+    <h1 class="brim">Thông tin liên hệ doanh nghiệp</h1>
+    <h3 class="uti">Dữ liệu liên hệ chi tiết (đầu mối nội bộ, di động cá nhân…) chỉ được cung cấp cho người dùng đã đăng
+        nhập và chấp nhận điều khoản sử dụng dữ liệu Smart Vision. Trên hồ sơ công khai, các trường số điện thoại và
+        email đã được ẩn theo chính sách an toàn dữ liệu.</h3>
+    <div class="box">
+        <button onclick="signup()">sign up</button>
+        <button onclick="signin()">sign in</button>
 
-ctx.fillStyle = "red";
-ctx.fillRect(50, 50, 200, 100);
-</script>
-        <div>
-        <div>
+      
+    </div>
+    <h1 class="brim">Tổng quan dữ liệu liên hệ cho hồ sơ này:</h1>
+    <ul>
+        <li class="uti">Đã ghi nhận khoảng 1 đầu mối liên hệ nội bộ trong hồ sơ này.</li>
+        <li class="uti">Điểm uy tín dữ liệu Smart Vision: 90/100 – Tin cậy cao</li>
+        <li class="uti">Dữ liệu đầy đủ bao gồm: tên người liên hệ, chức vụ, số di động, email công việc… (chỉ xem được
+            sau khi đăng nhập).</li>
+    </ul>
+    <img src="data:image/webp;base64,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"
+        alt="link liên kết">
     <div>
-        <h1 class="brim">Công Ty Cổ Phần Công Nghệ Rada360</h1>
-        <h3 class="uti">Đây là trang tra cứu thông tin doanh nghiệp, tra cứu công ty và tra cứu mã số thuế doanh nghiệp cho Công Ty Cổ Phần Công Nghệ Rada360 tại Hồ Chí Minh. Bạn có thể dùng Smart Vision để xem nhanh hồ sơ, ngành nghề và các doanh nghiệp liên quan trong cùng khu vực.</h3>
-        </div>
-        <div>
-        <h1 class="brim">Thông tin liên hệ doanh nghiệp</h1>
-        <h3 class="uti">Dữ liệu liên hệ chi tiết (đầu mối nội bộ, di động cá nhân…) chỉ được cung cấp cho người dùng đã đăng nhập và chấp nhận điều khoản sử dụng dữ liệu Smart Vision. Trên hồ sơ công khai, các trường số điện thoại và email đã được ẩn theo chính sách an toàn dữ liệu.</h3>
-        </div>
-        <div class="box">
-   <button onclick="signup()">sign up</button>
-<button onclick="signin()">sign in</button>
-
-<script>
-function signup(){
-    alert("Chuyển đến trang đăng ký");
-    window.location.href = "signup.html";
-}
-
-function signin(){
-    alert("Chuyển đến trang đăng nhập");
-    window.location.href = "signin.html";
-}
-</script>
-
-        </div>
-        <h1 class="brim">Tổng quan dữ liệu liên hệ cho hồ sơ này:</h1>
-        <ul>
-            <li class="uti">Đã ghi nhận khoảng 1 đầu mối liên hệ nội bộ trong hồ sơ này.</li>
-            <li class="uti">Điểm uy tín dữ liệu Smart Vision: 90/100 – Tin cậy cao</li>
-            <li class="uti">Dữ liệu đầy đủ bao gồm: tên người liên hệ, chức vụ, số di động, email công việc… (chỉ xem được sau khi đăng nhập).</li>
-        </ul>
-        <img src="data:image/webp;base64,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" alt="link liên kết">
-        <div>
         <a>https://rada360.com/vi</a>
     </div>
-    </body>
-</html
+      <script>
+            function signup() {
+                alert("Chuyển đến trang đăng ký");
+                window.location.href = "signup.html";
+            }
+
+            function signin() {
+                alert("Chuyển đến trang đăng nhập");
+                window.location.href = "signin.html";
+            }
+        </script>
+
+</body>
+
+</html>
