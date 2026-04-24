@@ -5,68 +5,70 @@
     <meta charset="UFT-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>hiệu ứng hover menu</title>
 </head>
 
 <body>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
-        ul{
+
+        ul {
             list-style: none;
         }
-        body{
+
+        body {
             font-family: "Segoe UI", Tahoma, Geneva, verdana, sans-serif;
             line-height: 1.2;
-            color:#333;
+            color: #333;
         }
 
-        #wrapper{
+        #wrapper {
             height: 100vh;
             display: flex;
             justify-content: center;
         }
 
-        nav{
+        nav {
             margin-top: 30px;
         }
 
-        ul#main-menu{
+        ul#main-menu {
             display: flex;
         }
-        
-        ul#main-menu li{
+
+        ul#main-menu li {
             padding: 0px 20px;
         }
 
-        ul#main-menu a{
+        ul#main-menu a {
             display: block;
             padding: 15px 0px;
             text-transform: uppercase;
             font-weight: bold;
             text-decoration: none;
-            color:#333;
+            color: #333;
             position: relative;
-         }
+        }
 
-         ul#main-menu a::after{
+        ul#main-menu a::after {
             content: "";
             height: 5px;
             width: 0;
-            background:tomato;
+            background: tomato;
             position: absolute;
             bottom: 0px;
             left: 0;
             transition: all 0.5s ease-in-out;
-         }
+        }
 
-         ul#main-menu a:hover::after{
+        ul#main-menu a:hover::after {
             width: 50%;
             transform: translateX(100%);
-         }
-
+        }
     </style>
     <div id="wrapper">
         <nav>
@@ -79,5 +81,7 @@
             </ul>
         </nav>
     </div>
+
 </body>
+
 </html>
