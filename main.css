@@ -95,3 +95,26 @@ body::before{
 a {
     color:aliceblue;
 }
+body{
+    margin:0;
+    background:black;
+}
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+#wrapper{
+    position:relative;
+    z-index:10;
+}
+
+h1{
+    color:white;
+    text-align:center;
+}
