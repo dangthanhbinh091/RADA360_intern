@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +17,6 @@
             --glow: 0 0 25px rgba(0, 255, 255, .45), 0 0 60px rgba(138, 43, 226, .25);
             --card-bg: rgba(2, 8, 20, .48);
         }
-
         html,
         body {
             height: 100%;
@@ -27,9 +25,7 @@
             color: var(--fg);
             font-family: system-ui, Segoe UI, Inter, Roboto, Arial, sans-serif;
             overflow: auto;
-            /* cho phép cuộn trang */
         }
-
         .wrap {
             position: relative;
             z-index: 2;
@@ -39,7 +35,6 @@
             justify-content: center;
             padding: 28px
         }
-
         .shell {
             width: 100%;
             max-width: 1100px;
@@ -47,14 +42,12 @@
             grid-template-columns: 1.1fr .9fr;
             gap: 26px
         }
-
         @media (max-width:900px) {
             .shell {
                 grid-template-columns: 1fr;
                 gap: 20px
             }
         }
-
         .panel {
             padding: 22px;
             border-radius: 18px;
@@ -63,18 +56,15 @@
             box-shadow: var(--glow);
             transition: .3s
         }
-
         .panel:hover {
             box-shadow: 0 0 50px var(--cyan), 0 0 100px var(--vio);
             transform: scale(1.02)
         }
-
         .head {
             display: flex;
             align-items: center;
             gap: 16px
         }
-
         .avatar {
             position: relative;
             width: 96px;
@@ -86,7 +76,6 @@
             cursor: pointer;
             transition: .3s
         }
-
         .avatar::after {
             content: "";
             position: absolute;
@@ -97,24 +86,20 @@
             z-index: -1;
             animation: halo 6s linear infinite
         }
-
         @keyframes halo {
             to {
                 transform: rotate(360deg)
             }
         }
-
         .avatar:hover {
             box-shadow: 0 0 60px var(--cyan), 0 0 100px var(--vio);
             transform: scale(1.08)
         }
-
         .avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover
         }
-
         .online {
             position: absolute;
             right: 6px;
@@ -125,7 +110,6 @@
             background: linear-gradient(135deg, var(--cyan), var(--vio));
             box-shadow: 0 0 10px var(--cyan)
         }
-
         .title h1 {
             margin: 0;
             font-size: 1.6rem;
@@ -136,7 +120,6 @@
             align-items: center;
             gap: 8px
         }
-
         .badge-verify {
             display: inline-flex;
             align-items: center;
@@ -144,23 +127,19 @@
             width: 22px;
             height: 22px
         }
-
         .badge-verify svg {
             display: block
         }
-
         .sub {
             color: #bfefff;
             opacity: .9
         }
-
         .badges {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin: 12px 0 6px
         }
-
         .badge {
             font-size: .9rem;
             padding: 6px 10px;
@@ -169,25 +148,19 @@
             border: 1px solid rgba(0, 255, 255, .35);
             color: var(--fg)
         }
-
-        /* Email & phone cùng màu */
         .badge a {
             color: inherit;
             text-decoration: none
         }
-
-        /* Email không xanh */
         .bio {
             margin: 12px 0 16px;
             color: #dfffff
         }
-
         .actions {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px
         }
-
         .btn {
             padding: 12px 10px;
             border-radius: 12px;
@@ -199,14 +172,12 @@
             transition: .25s transform, color, box-shadow;
             text-align: center
         }
-
         .btn:hover {
             transform: translateY(-2px);
             background: radial-gradient(120% 120% at 50% 10%, rgba(0, 255, 255, .22), rgba(138, 43, 226, .22));
             box-shadow: var(--glow);
             color: #001217
         }
-
         .section {
             margin: 4px 0 12px;
             color: var(--cyan);
@@ -214,7 +185,6 @@
             text-shadow: 0 0 10px var(--cyan);
             position: relative
         }
-
         .section::after {
             content: "";
             position: absolute;
@@ -225,25 +195,21 @@
             background: linear-gradient(90deg, var(--cyan), var(--vio));
             border-radius: 2px
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 12px
         }
-
         @media (max-width:900px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr)
             }
         }
-
         @media (max-width:520px) {
             .grid {
                 grid-template-columns: 1fr
             }
         }
-
         .tile {
             display: flex;
             justify-content: center;
@@ -257,19 +223,16 @@
             border: 1px solid rgba(0, 255, 255, .25);
             transition: .25s all
         }
-
         .tile:hover {
             background: radial-gradient(circle at center, rgba(0, 255, 255, .25), rgba(138, 43, 226, .2));
             box-shadow: var(--glow);
             transform: scale(1.05)
         }
-
         .footer {
             text-align: center;
             margin-top: 18px;
             color: #bfefff
         }
-
         .toast {
             position: fixed;
             bottom: 20px;
@@ -284,7 +247,6 @@
             z-index: 5;
             box-shadow: var(--glow)
         }
-
         #galaxy {
             position: fixed;
             top: 0;
@@ -293,21 +255,16 @@
             height: 100%;
             z-index: 0
         }
-
-        /* Keyboard focus */
         :focus-visible {
             outline: 2px dashed var(--cyan);
             outline-offset: 4px
         }
-
-        /* Respect reduced motion */
         @media (prefers-reduced-motion:reduce) {
 
             .panel:hover,
             .avatar:hover {
                 transform: none
             }
-
             .avatar::after {
                 animation: none
             }
@@ -348,7 +305,6 @@
                         <div class="sub">Coder • Reverse Eng • 0xSec</div>
                     </div>
                 </div>
-                <!-- Badges tách riêng, email cùng màu fg -->
                 <div class="badges">
                     <span class="badge">📍 Nha Trang, Việt Nam</span>
                     <span class="badge">☎ 0915784491</span>
@@ -361,8 +317,6 @@
                     <button class="btn" id="toggleMusicBtn" aria-pressed="true">🔊 Tắt nhạc</button>
                 </div>
             </section>
-
-            <!-- Liên kết & mạng xã hội -->
             <section class="panel" aria-label="Liên kết & mạng xã hội">
                 <div class="section">Tài nguyên</div>
                 <div class="grid">
@@ -390,28 +344,20 @@
             </section>
         </div>
     </div>
-
     <div class="toast" id="toast">Đã copy!</div>
-
     <audio id="backgroundAudio" loop preload="auto" style="display:none">
         <source src="https://pomf2.lain.la/f/l5nv41b6.mp3" type="audio/mpeg" />
     </audio>
-
     <script>
-        // Music toggle
         const audio = document.getElementById('backgroundAudio');
         const btn = document.getElementById('toggleMusicBtn');
         (async () => { try { await audio.play(); } catch { btn.textContent = '🔈 Bật nhạc'; } })();
         btn.addEventListener('click', async () => { if (audio.paused) { await audio.play(); btn.textContent = '🔊 Tắt nhạc'; } else { audio.pause(); btn.textContent = '🔈 Bật nhạc'; } });
-
-        // Toast + copy
         const toast = document.getElementById('toast');
         function showToast(text) { toast.textContent = text; toast.style.display = 'block'; clearTimeout(showToast.t); showToast.t = setTimeout(() => toast.style.display = 'none', 1500); }
         function safeCopy(t) { if (navigator.clipboard?.writeText) { navigator.clipboard.writeText(t).then(() => showToast('Đã copy!')); } else { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); showToast('Đã copy!'); } }
         document.getElementById('copyMail')?.addEventListener('click', (e) => { e.preventDefault(); safeCopy('dang36716@gmail.com') });
         document.getElementById('copyPhone')?.addEventListener('click', (e) => { e.preventDefault(); safeCopy('0915784491') });
-
-        // Avatar click hearts
         const avatar = document.getElementById('avatar');
         avatar.addEventListener('click', (e) => { for (let i = 0; i < 7; i++) spawnHeart(e.offsetX ?? 48, e.offsetY ?? 48); });
         function spawnHeart(x, y) {
@@ -422,8 +368,6 @@
             function step(t) { const k = Math.min(1, (t - t0) / 900); el.style.transform = `translate(${dx * k}px, ${dy * k}px) rotate(${rot * k}deg)`; el.style.opacity = (1 - k).toFixed(2); if (k < 1) requestAnimationFrame(step); else el.remove(); }
             requestAnimationFrame(step);
         }
-
-        // Galaxy background
         const cvs = document.getElementById('galaxy'), ctx = cvs.getContext('2d');
         let W, H, stars = [], meteors = []; function size() { W = cvs.width = innerWidth; H = cvs.height = innerHeight }
         function makeStars(n) { stars = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.5 + .2, v: Math.random() * 0.25 + 0.08 })) }

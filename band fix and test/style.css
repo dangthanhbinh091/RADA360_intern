@@ -1,15 +1,12 @@
 body {
     font-family: Arial, sans-serif;
 }
-
 .mySlides {
     display: none;
 }
-
 .w3-input {
     margin-top: 10px;
 }
-
 img {
     object-fit: cover;
 }
